@@ -1,10 +1,13 @@
-import Button from './components/Button/Button'
+import cards from './mock/card'
+import Card from './components/Card/Card'
 
 function App() {
+  
   return (
     <>
-      <Button title={'Vite'} link={'https://vitejs.dev/guide/'} />
-      <Button title={'Google'} link={'https://google.com/'} />
+      {cards.map(card => (
+          <Card key={card.id} card={card} />
+      ))}
     </>
   )
 }
