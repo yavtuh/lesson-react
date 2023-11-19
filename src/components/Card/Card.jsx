@@ -1,7 +1,6 @@
 import './Card.css';
 
-const Card = (props) => {
-    const { card } = props;
+const Card = ({ card }) => {
     const finishedModules = card.finishedModules ?? 0;
     const modulesAprove = finishedModules * 100 / card.modules;
     const hours = Math.floor(card.duration / 3600);

@@ -1,13 +1,11 @@
-import cards from './mock/card'
-import Card from './components/Card/Card'
+import Counter from "./components/Counter/Counter"
+
 
 function App() {
   
   return (
     <>
-      {cards.map(card => (
-          <Card key={card.id} card={card} />
-      ))}
+      <Counter />
     </>
   )
 }
