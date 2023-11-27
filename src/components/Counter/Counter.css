@@ -1,0 +1,13 @@
+.counter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.counter__text{
+    text-align: center;
+}
+.counter__button{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
