@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage';
 import UsersPage from './pages/UsersPage/UsersPage';
 import Page404 from './pages/Page404';
 import UserPage from './pages/UserPage/UserPage';
+import CounterPage from './pages/CounterPage/CounterPage';
 
 
 function RouteGuard({ children, redirectTo }) {
@@ -27,6 +28,7 @@ const Route = () => {
         { element: <MainPage />, index: true },
         { path: 'users', element: <UsersPage /> },
         { path: 'users/:id', element: <UserPage /> },
+        { path: 'counter', element: <CounterPage/> },
       ],
     },
     {
