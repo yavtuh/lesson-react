@@ -1,0 +1,48 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    &__address{
+
+    }
+
+    &__address-item{
+        display: flex;
+        justify-content: space-between;
+        font-size: rem(14);
+        &:not(:last-child) {
+            padding-bottom: rem(8);
+        }
+    }
+
+    &__address-list{
+        padding-top: rem(10);
+    }
+
+    &__address-title{
+        color: white;
+        font-size: rem(16);
+    }
+
+    &__contacts{
+        display: flex;
+        justify-content: space-between;
+        gap: rem(8);
+        font-size: rem(14);
+        word-break: break-all;
+    }
+
+    &__email{
+        text-align: left;
+    }
+
+    &__name{
+        text-align: center;
+        color: white;
+    }
+
+    &__phone{
+        text-align: right;
+    }
+}
