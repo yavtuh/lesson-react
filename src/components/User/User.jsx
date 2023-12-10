@@ -1,25 +1,29 @@
-import React from 'react'
+import './User.scss';
 
 const User = ({ user }) => {
-  const { street, city, zipcode, geo } = user.address;
+  const { street, city } = user.address;
   return (
-    <div>
-      <p>User Name: {user.username}</p>
-      <p>Email: {user.email}</p>
-      <p>Phone: {user.phone}</p>
-      <p>Address</p>
-      <ul>
-        <li>Street: {street}</li>
-        <li>City: {city}</li>
-        <li>Zipcode: {zipcode}</li>
-        <li>
-          <p>Geo</p>
-          <ul>
-            <li>Lat: {geo.lat}</li>
-            <li>Lng: {geo.lng}</li>
-          </ul>
-        </li>
-      </ul>
+    <div className="user">
+      <div className="user__name">
+        <p>{user.username}</p>
+      </div>
+      <div className="user__contacts">
+        <div className="user__email"><p>{user.email}</p></div>
+        <div className="user__phone"><p>{user.phone}</p></div>
+      </div>
+      <div className="user__address">
+        <div className="user__address-title">
+          <p>Address</p>
+        </div>
+        <ul className="user__address-list">
+          <li className="user__address-item">
+            <span>Street:</span> <span>{street}</span>
+          </li>
+          <li className="user__address-item">
+            <span>City:</span> <span>{city}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

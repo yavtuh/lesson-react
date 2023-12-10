@@ -1,0 +1,22 @@
+.user{
+    &__container{
+        width: 100%;
+    }
+    &__title{
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    &__item{
+        margin-top:rem(20);
+        padding: rem(20);
+        background-color: rgb(33, 43, 54);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+        border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

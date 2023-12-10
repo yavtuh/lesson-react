@@ -1,0 +1,35 @@
+.users{
+    &__container{
+
+    }
+    &__item{
+        padding: rem(20);
+        background-color: rgb(33, 43, 54);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+        border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__list{
+        padding-top: rem(50);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(15);
+        align-items: center;
+        justify-content: center;
+        & :nth-last-child(1):nth-child(3n + 1){
+            grid-column: 2 / 3;
+        }
+        & :nth-last-child(2):nth-child(3n + 2),
+        & :nth-last-child(1):nth-child(3n + 2){
+            grid-column: auto;
+        }
+    }
+    &__title{
+        font-size: 1.5rem;
+        color: #fff;
+    }
+}
