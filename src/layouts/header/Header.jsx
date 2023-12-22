@@ -15,6 +15,9 @@ const Header = () => {
               <li className="menu__item">
                 <NavLink to="/users" className={({ isActive }) => 'menu__link' + (isActive ? ' active' : '')} >Users</NavLink>
               </li>
+              <li className="menu__item">
+                <NavLink to="/counter" className={({ isActive }) => 'menu__link' + (isActive ? ' active' : '')} >Counter</NavLink>
+              </li>
             </ul>
           </nav>
         </div>
