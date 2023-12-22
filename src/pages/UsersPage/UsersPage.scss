@@ -1,35 +1,78 @@
-.users{
-    &__container{
-
+.users {
+    &__container {
     }
-    &__item{
+    &__item {
         padding: rem(20);
         background-color: rgb(33, 43, 54);
         transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
         border-radius: 16px;
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }
-    &__list{
+    &__list {
         padding-top: rem(50);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: rem(15);
         align-items: center;
         justify-content: center;
-        & :nth-last-child(1):nth-child(3n + 1){
+        & :nth-last-child(1):nth-child(3n + 1) {
             grid-column: 2 / 3;
         }
         & :nth-last-child(2):nth-child(3n + 2),
-        & :nth-last-child(1):nth-child(3n + 2){
+        & :nth-last-child(1):nth-child(3n + 2) {
             grid-column: auto;
         }
     }
-    &__title{
+    &__title {
         font-size: 1.5rem;
         color: #fff;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__refetch {
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        outline: 0px;
+        border: 0px;
+        margin: 0px;
+        cursor: pointer;
+        user-select: none;
+        vertical-align: middle;
+        appearance: none;
+        text-decoration: none;
+        font-weight: 700;
+        line-height: 1.71429;
+        font-size: 0.875rem;
+        text-transform: unset;
+        padding: 6px 12px;
+        border-radius: 8px;
+        transition:
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 167, 111);
+
+        box-shadow: none;
+        &:hover {
+            box-shadow: rgba(0, 167, 111, 0.24) 0px 8px 16px 0px;
+            text-decoration: none;
+            background-color: rgb(0, 120, 103);
+        }
     }
 }
